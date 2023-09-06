@@ -1,0 +1,369 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <title> Informatic Computech Pvt. Ltd.</title>
+
+
+
+
+    <%--<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+<script type="text/javascript">
+    $(window).load(function () {
+        $("#pageloaddiv").fadeOut(5000);
+
+    });
+    setTimeout(function () {
+        $("#blocker").hide();
+    }, 5000);
+
+</script>--%>
+<%--<style type="text/css">
+#pageloaddiv {
+position: fixed;
+left:700px;
+top:400px;
+width: 100%;
+height: 100%;
+z-index: 1000;
+
+}
+#blocker
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+    background-color: #000;
+    z-index: 1000;
+    overflow: auto;
+}
+    #blocker div
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 5em;
+        height: 2em;
+        margin: -1em 0 0 -2.5em;
+        color: #fff;
+        font-weight: bold;
+    }
+
+</style>--%>
+
+     <link href="css/layout.css" rel="stylesheet" type="text/css" />
+     <style type="text/css">
+     #search a
+     {
+         color:White;
+     }
+     #search a:visited
+     {
+         color:White;
+     }
+     #gallery
+{
+    height:auto;
+    margin:0px;
+    padding:5px;
+    padding-left:0px;
+}
+     </style>
+    <asp:ContentPlaceHolder id="cssplaceholder" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="top">
+<%--<div id="pageloaddiv" runat="server">
+
+
+    <img src="loader.gif" />
+    </div>
+    <div id="blocker">
+   <div>Loading...</div>
+</div>--%>
+   
+    <form id="form1" runat="server">
+    <div>
+
+    <div class="wrapper col1">
+  <div id="head">
+   <h1> <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/home.aspx">
+        <asp:Image ID="Image7" runat="server" ImageUrl="~/images/ICPL_Logo.png"/></asp:HyperLink></h1>
+   <h2><asp:HyperLink ID="HyperLink23" runat="server" NavigateUrl="~/home.aspx">Informatic Computech Pvt. Ltd.</asp:HyperLink></h2>
+    <p style="margin-left:430px;">IT Solution Provider</p>
+    <div id="topnav" style="width:100%;">
+      <ul>
+        <li><asp:HyperLink ID="HyperLink2" runat="server" CssClass="active" NavigateUrl="~/home.aspx" style="margin-left:15px;">Home</asp:HyperLink></li>
+       <li style=""><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="#">Website Solution</asp:HyperLink>
+          <ul>
+            <li><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/websolution.aspx">Web Development</asp:HyperLink></li>
+            <li><asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/webdesign.aspx">Web Design</asp:HyperLink></li>
+            <li><asp:HyperLink ID="HyperLink17" runat="server" NavigateUrl="~/webhosting.aspx">Web Hosting</asp:HyperLink></li>
+            <li><asp:HyperLink ID="HyperLink14" runat="server" NavigateUrl="~/seo.aspx">Web Promotion</asp:HyperLink></li>
+          </ul>
+        </li>
+        <li><asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="#">Corporate Solution</asp:HyperLink>
+        
+         <ul>
+                <li><asp:HyperLink ID="HyperLink15" runat="server" NavigateUrl="~/corporate.aspx">Corporate Solution</asp:HyperLink></li>
+                 <li><asp:HyperLink ID="HyperLink22" runat="server" NavigateUrl="~/RelienceSolution.aspx">Relience Bussiness Solution</asp:HyperLink></li>
+                 <li><asp:HyperLink ID="HyperLink25" runat="server" NavigateUrl="~/AirtelSolutions.aspx">Airtel Bussiness Solution</asp:HyperLink></li>
+                 <li><asp:HyperLink ID="HyperLink26" runat="server" NavigateUrl="~/SifySolutions.aspx">Sify Bussiness Solution</asp:HyperLink></li>
+            </ul>
+        
+        </li>
+		<li><asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/callingsolution.aspx">Call Center Solution</asp:HyperLink></li>
+		<li><asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/smssolution.aspx">SMS Solution</asp:HyperLink></li>
+        <li style=""><asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="#">Corporate IT Supplies</asp:HyperLink>
+            <ul>
+                <li><asp:HyperLink ID="HyperLink19" runat="server" NavigateUrl="~/laptop.aspx">Laptop</asp:HyperLink></li>
+                 <li><asp:HyperLink ID="HyperLink20" runat="server" NavigateUrl="~/desktop.aspx">Desktop</asp:HyperLink></li>
+                 <li><asp:HyperLink ID="HyperLink24" runat="server" NavigateUrl="~/printer.aspx">Printer</asp:HyperLink></li>
+            </ul>
+        </li>
+        <li style=""><asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="#">Network Solution</asp:HyperLink>
+       
+            <ul>
+                 <li><asp:HyperLink ID="HyperLink16" runat="server" NavigateUrl="~/server.aspx">Server</asp:HyperLink></li>
+                <li><asp:HyperLink ID="HyperLink11" runat="server" NavigateUrl="~/switches.aspx">Switch</asp:HyperLink></li>
+                <li><asp:HyperLink ID="HyperLink21" runat="server" NavigateUrl="~/antivirus.aspx">Antivirus</asp:HyperLink></li>
+            </ul>
+        </li>
+        <li class="last"><asp:HyperLink ID="HyperLink13" runat="server" NavigateUrl="~/client.aspx">Clients</asp:HyperLink></li>
+      </ul>
+    </div>
+    <div id="search" style="text-align:right; color:White;">
+      <asp:HyperLink ID="HyperLink27" runat="server" NavigateUrl="~/TrainingCourses.aspx">Training</asp:HyperLink> |
+     <asp:HyperLink ID="HyperLink12" runat="server" NavigateUrl="~/aboutus.aspx">About&nbsp;Us</asp:HyperLink> |
+     <asp:HyperLink ID="HyperLink18" runat="server" NavigateUrl="~/contactus.aspx">Contact&nbsp;Us</asp:HyperLink>
+    </div>
+  </div>
+</div>
+
+<div class="wrapper col2">
+<div id="gallery" align="center">
+ <script type="text/javascript" src="js/jssor.core.js"></script>
+    <script type="text/javascript" src="js/jssor.utils.js"></script>
+    <script type="text/javascript" src="js/jssor.slider.js"></script>
+    <script>
+
+        jssor_slider1_starter = function (containerId) {
+
+            var _SlideshowTransitions = [
+            //Fade
+            {$Duration: 1200, $Opacity: 2 }
+            ];
+
+            var options = {
+                $AutoPlay: true,                                   
+                $AutoPlaySteps: 1,                                 
+                $AutoPlayInterval: 3000,                          
+                $PauseOnHover: 1,                             
+
+                $ArrowKeyNavigation: true,   			          
+                $SlideDuration: 500,                              
+                $MinDragOffsetToSlide: 20,                         
+                                            
+                $SlideSpacing: 0, 					               
+                $DisplayPieces: 1,                                 
+                $ParkingPosition: 0,                               
+                $UISearchMode: 1,                                 
+                $PlayOrientation: 1,                              
+                $DragOrientation: 3,                                
+
+                $SlideshowOptions: {                               
+                    $Class: $JssorSlideshowRunner$,                 
+                    $Transitions: _SlideshowTransitions,           
+                    $TransitionsOrder: 1,                           
+                    $ShowLink: true                                   
+                },
+
+                $BulletNavigatorOptions: {                               
+                    $Class: $JssorBulletNavigator$,                       
+                    $ChanceToShow: 2,                               
+                    $AutoCenter: 1,                                 
+                    $Steps: 1,                                      
+                    $Lanes: 1,                                    
+                    $SpacingX: 10,                                 
+                    $SpacingY: 10,                                   
+                    $Orientation: 1                                 
+                },
+
+                $ArrowNavigatorOptions: {
+                    $Class: $JssorArrowNavigator$,              
+                    $ChanceToShow: 2,                              
+                    $Steps: 1                                       
+                }
+            };
+            var jssor_slider1 = new $JssorSlider$(containerId, options);
+
+           
+            function ScaleSlider() {
+                var parentWidth = jssor_slider1.$Elmt.parentNode.clientWidth;
+                if (parentWidth)
+                    jssor_slider1.$SetScaleWidth(Math.min(parentWidth, 1024));
+                else
+                    $JssorUtils$.$Delay(ScaleSlider, 30);
+            }
+
+            ScaleSlider();
+            $JssorUtils$.$AddEvent(window, "load", ScaleSlider);
+
+
+            if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
+                $JssorUtils$.$OnWindowResize(window, ScaleSlider);
+            }
+
+           
+        };
+    </script>
+   
+    <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 1000px; height: 250px; overflow: hidden;">
+
+        <!-- Loading Screen -->
+        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+            <div style="position: absolute; display: block; background: url(loading.gif) no-repeat center center;
+                top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+        </div>
+
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1000px; height: 250px; overflow: hidden;">
+             <div>
+            <asp:Image ID="Image4" runat="server" ImageUrl="~/images/Website Solutions.png"/>
+            </div>
+            <div>
+            <asp:Image ID="Image1" runat="server" ImageUrl="~/images/Corporate Solutions.png" />                
+            </div>
+           <div>
+            <asp:Image ID="Image5" runat="server" ImageUrl="~/images/Call Centre Solution.png" />
+            </div>
+            <div>
+           <asp:Image ID="Image2" runat="server" ImageUrl="~/images/SMS Solution.png"/>
+            </div>
+            <div>
+            <asp:Image ID="Image3" runat="server" ImageUrl="~/images/Corporate IT Solution.png"/>
+            </div>
+             <div>
+            <asp:Image ID="Image6" runat="server" ImageUrl="~/images/Networking Solutions.png"/>
+            </div>
+            
+            
+        </div>
+
+       
+        <style>
+            .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+                background: url(images/b05.png) no-repeat;
+                overflow: hidden;
+                cursor: pointer;
+            }
+
+            .jssorb05 div {
+                background-position: -7px -7px;
+            }
+
+                .jssorb05 div:hover, .jssorb05 .av:hover {
+                    background-position: -37px -7px;
+                }
+
+            .jssorb05 .av {
+                background-position: -67px -7px;
+            }
+
+            .jssorb05 .dn, .jssorb05 .dn:hover {
+                background-position: -97px -7px;
+            }
+        </style>
+       
+        <div u="navigator" class="jssorb05" style="position: absolute; bottom: 16px; right: 6px;">
+          
+            <div u="prototype" style="POSITION: absolute; WIDTH: 16px; HEIGHT: 16px;"></div>
+        </div>
+        
+        <style>
+          
+            .jssora12l, .jssora12r, .jssora12ldn, .jssora12rdn {
+                position: absolute;
+                cursor: pointer;
+                display: block;
+                background: url(images/a12.png) no-repeat;
+                overflow: hidden;
+            }
+
+            .jssora12l {
+                background-position: -16px -37px;
+            }
+
+            .jssora12r {
+                background-position: -75px -37px;
+            }
+
+            .jssora12l:hover {
+                background-position: -136px -37px;
+            }
+
+            .jssora12r:hover {
+                background-position: -195px -37px;
+            }
+
+            .jssora12ldn {
+                background-position: -256px -37px;
+            }
+
+            .jssora12rdn {
+                background-position: -315px -37px;
+            }
+        </style>
+        
+        <span u="arrowleft" class="jssora12l" style="width: 30px; height: 46px; top: 123px; left: 0px;">
+        </span>
+       
+        <span u="arrowright" class="jssora12r" style="width: 30px; height: 46px; top: 123px; right: 0px">
+        </span>
+        
+        
+       
+        <script>
+            jssor_slider1_starter('slider1_container');
+        </script>
+
+    </div>
+    </div>
+</div>
+    <asp:ContentPlaceHolder id="sliderplaceholder" runat="server">
+        
+    </asp:ContentPlaceHolder>
+
+
+<div class="wrapper col4">
+    <asp:ContentPlaceHolder id="contentplaceholder" runat="server">
+    
+    </asp:ContentPlaceHolder>
+</div>
+<div class="wrapper col5">
+  <div id="footer">
+     
+   
+      Copyright - 2014  &copy; Informatic Comptech Pvt. Ltd.- All Rights Reserved
+     
+      
+   
+    <div class="clear"></div>
+  </div>
+</div>
+    </div>
+    </form>
+    <asp:ContentPlaceHolder id="javascriptplaceholder" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>
